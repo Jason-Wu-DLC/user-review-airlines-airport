@@ -2,7 +2,7 @@ Readme
 
 This project will use cloud computing technology to design and implement a big data processing application for analysing airline user feedback. Through in-depth analysis of users' feedback at all stages of boarding, it can help airlines and airport optimize their services and improve users' satisfaction. The customer service quality of airlines and airports directly affects passengers' travel experience. By analysing the data of user comments, airlines and airports can understand the pain points and advantages of user feedback, and then optimize their operations and enhance the competitiveness of airlines.
 
-Version
+#Version
 Docker latest
 Docker-compose 1.26.2
 namenode:2.0.0
@@ -12,7 +12,7 @@ historyserver:2.0.0
 hadoop-datanode:2.0.0
 spark-worker:3.0.0
 
-folder
+#folder
 ~/infs3208bigdata/             
 │
 ├── docker-compose.yml          
@@ -41,8 +41,8 @@ folder
     └── spark-net/              
 
 
-Contact
-Yulin Wu
+#Contact
+Yulin Wu/
 s4565901@student.uq.edu.au
 
 
