@@ -4,12 +4,19 @@ This project will use cloud computing technology to design and implement a big d
 
 # Version
 Docker latest
+
 Docker-compose 1.26.2
+
 namenode:2.0.0
+
 hadoop3.2.1
+
 resourcemanager:2.0.0
+
 historyserver:2.0.0
+
 hadoop-datanode:2.0.0
+
 spark-worker:3.0.0
 
 # folder
