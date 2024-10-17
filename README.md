@@ -47,49 +47,43 @@ s4565901@student.uq.edu.au
 
 
 Setup step
-# Update and upgrade the system packages to the latest versions
-sudo apt update && sudo apt upgrade -y 
+# Update and upgrade the system to ensure all packages are up-to-date
+sudo apt update && sudo apt upgrade -y
 
-# Install essential utilities like curl, wget, and git
+# Install necessary tools: curl, wget, and git
 sudo apt install -y curl wget git
 
-# Create a project directory and navigate into it
-mkdir ~/infs3208bigdata
-cd ~/infs3208bigdata
-
-# Install Docker to manage containers
+# Install Docker from the default repository
 sudo apt-get install docker.io -y
 
-# Download the specified version of Docker Compose and make it executable
+# Download and install the specified version of Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Create and open a new Docker Compose YAML configuration file (Copy file)
-vim docker-compose.yml
+# Option 1: Clone the project repository from GitHub
+git clone https://github.com/yulin-wu-UQ/infs3208bigdata.git
+cd infs3208bigdata
 
-# Create and open an environment variable file for Hadoop and Spark configurations
-vim hadoop.env
+# Option 2: Manually set up the project directory and environment
+mkdir ~/infs3208bigdata
+cd ~/infs3208bigdata
+vim docker-compose.yml  # Create and edit the Docker Compose configuration file
+vim hadoop.env  # Create and edit the environment configuration file for Hadoop
+mkdir nbs/  # Create a directory for notebook files
+mkdir raw/  # Create a directory for raw data files
 
-# Create directories for Jupyter notebooks and raw data
-mkdir nbs/
-mkdir raw/
-
-# Set read, write, and execute permissions for all users on these directories
+# Important: Set permissions to ensure Docker can access these directories
 sudo chmod -R 777 nbs/
 sudo chmod -R 777 raw/
 
-# Start the Docker containers in detached mode as defined in the Docker Compose file
+# Start up all containers as defined in the Docker Compose configuration
 sudo docker-compose up -d
 
-# List all running Docker containers to verify that everything is running as expected
+# Check the status of running Docker containers to ensure they are up and running
 sudo docker ps
 
-# Execute commands inside the running Hadoop Namenode container to create a new directory in HDFS
-sudo docker exec -it 0e38cfcfc802 hdfs dfs -mkdir -p /raw
-
-# Upload datasets from the Jupyter notebook directory to the HDFS directory created above
-sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/airline.csv /raw/airline.csv
+# Upload data files from the local system to the Hadoop Distributed File System (HDFS)
+sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/airline.csv /raw/airline.csv 
 sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/airport.csv /raw/airport.csv
-sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/lounge.csv /raw/lounge.csv
+sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/lounge.csv /raw/lounge.csv 
 sudo docker exec -it 0e38cfcfc802 hdfs dfs -put /home/nbs/seat.csv /raw/seat.csv
-
