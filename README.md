@@ -18,24 +18,24 @@ folder
 ├── docker-compose.yml          # Docker Compose configuration file │
 ├── hadoop.env                  # Environment variable file for Hadoop and Spark configuration│
 ├── nbs/                        # Directory for storing Jupyter Notebook files and code
-│   ├── airline.csv             # Dataset file for airlines
-│   ├── airport.csv             # Dataset file for airports 
-│   ├── lounge.csv              # Dataset file for lounges 
-│   └── seat.csv                # Dataset file for seats
+│   ├── airline.csv            
+│   ├── airport.csv             
+│   ├── lounge.csv              
+│   └── seat.csv                
 │    └── 4 ipynb                # jupyter notebook code
 │
 ├── raw/                        # Directory for raw data files, typically uploaded to HDFS 
-│   ├── airline.csv             # Same airline dataset in raw format 
-│   ├── airport.csv             # Same airport dataset in raw format 
-│   ├── lounge.csv              # Same lounge dataset in raw format
-│   └── seat.csv                # Same seat dataset in raw format 
+│   ├── airline.csv            
+│   ├── airport.csv             
+│   ├── lounge.csv              
+│   └── seat.csv                
 │
-├── volumes/                    # Volumes for Hadoop data nodes, NameNode, and history server 
-│   ├── hadoop_namenode/        # Volume for Hadoop NameNode 
-│   ├── hadoop_datanode1/       # Volume for Hadoop DataNode 1 
-│   ├── hadoop_datanode2/       # Volume for Hadoop DataNode 2 
-│   ├── hadoop_datanode3/       # Volume for Hadoop DataNode 3
-│   └── hadoop_historyserver/   # Volume for Hadoop History Server 
+├── volumes/                   
+│   ├── hadoop_namenode/        
+│   ├── hadoop_datanode1/       
+│   ├── hadoop_datanode2/       
+│   ├── hadoop_datanode3/       
+│   └── hadoop_historyserver/   
 │
 └── networks/                   # Docker network configuration for container communication 
     └── spark-net/              # Custom bridge network for Spark and Hadoop containers 
