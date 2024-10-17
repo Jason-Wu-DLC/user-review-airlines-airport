@@ -133,7 +133,7 @@ services:
         - "8081:8081"
     environment:
         - "SPARK_MASTER=spark://spark-master:7077"            
-        - SPARK_WORKER_CORES=1
+        - SPARK_WORKER_CORES=4
         - SPARK_WORKER_MEMORY=4g
         - NAMENODE_HOSTNAME=namenode
 
@@ -149,7 +149,7 @@ services:
         - "8082:8082"
     environment:
         - "SPARK_MASTER=spark://spark-master:7077"            
-        - SPARK_WORKER_CORES=1
+        - SPARK_WORKER_CORES=4
         - SPARK_WORKER_MEMORY=4g
         - NAMENODE_HOSTNAME=namenode
   
