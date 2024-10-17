@@ -15,16 +15,16 @@ spark-worker:3.0.0
 folder
 ~/infs3208bigdata/             
 │
-├── docker-compose.yml          # Docker Compose configuration file │
-├── hadoop.env                  # Environment variable file for Hadoop and Spark configuration│
-├── nbs/                        # Directory for storing Jupyter Notebook files and code
+├── docker-compose.yml          
+├── hadoop.env                  
+├── nbs/                        
 │   ├── airline.csv            
 │   ├── airport.csv             
 │   ├── lounge.csv              
 │   └── seat.csv                
-│    └── 4 ipynb                # jupyter notebook code
+│    └── 4 ipynb                
 │
-├── raw/                        # Directory for raw data files, typically uploaded to HDFS 
+├── raw/                        
 │   ├── airline.csv            
 │   ├── airport.csv             
 │   ├── lounge.csv              
@@ -37,8 +37,8 @@ folder
 │   ├── hadoop_datanode3/       
 │   └── hadoop_historyserver/   
 │
-└── networks/                   # Docker network configuration for container communication 
-    └── spark-net/              # Custom bridge network for Spark and Hadoop containers 
+└── networks/                   
+    └── spark-net/              
 
 
 Contact
