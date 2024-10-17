@@ -134,7 +134,7 @@ services:
     environment:
         - "SPARK_MASTER=spark://spark-master:7077"            
         - SPARK_WORKER_CORES=1
-        - SPARK_WORKER_MEMORY=2g
+        - SPARK_WORKER_MEMORY=4g
         - NAMENODE_HOSTNAME=namenode
 
   spark-worker-2:
@@ -150,7 +150,7 @@ services:
     environment:
         - "SPARK_MASTER=spark://spark-master:7077"            
         - SPARK_WORKER_CORES=1
-        - SPARK_WORKER_MEMORY=2g
+        - SPARK_WORKER_MEMORY=4g
         - NAMENODE_HOSTNAME=namenode
   
   jupyter-notebook:
