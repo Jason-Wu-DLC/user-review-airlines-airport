@@ -53,7 +53,7 @@ sudo apt update && sudo apt upgrade -y
 # Install necessary tools: curl, wget, and git
 sudo apt install -y curl wget git
 
-# Install Docker from the default repository
+# Install Docker 
 sudo apt-get install docker.io -y
 
 # Download and install the specified version of Docker Compose
