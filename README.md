@@ -19,9 +19,7 @@ hadoop-datanode:2.0.0
 
 spark-worker:3.0.0
 
-# folder
-~/infs3208bigdata/             
-│
+# folder      
 ├── docker-compose.yml          
 ├── hadoop.env                  
 ├── nbs/                        
@@ -50,7 +48,7 @@ spark-worker:3.0.0
 
 # Contact
 Yulin Wu/
-s4565901@student.uq.edu.au
+jasonwu940@outlook.com
 
 
 # Setup step
@@ -72,8 +70,6 @@ git clone https://github.com/yulin-wu-UQ/infs3208bigdata.git
 cd infs3208bigdata
 
 # Option 2: Manually set up the project directory and environment
-mkdir ~/infs3208bigdata
-cd ~/infs3208bigdata
 vim docker-compose.yml  # Create and edit the Docker Compose configuration file
 vim hadoop.env  # Create and edit the environment configuration file for Hadoop
 mkdir nbs/  # Create a directory for notebook files
